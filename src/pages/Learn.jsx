@@ -4,15 +4,20 @@ import DataStructure from '../components/Learn/DataStructure';
 
 const Learn = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Learn Data Structures and Algorithms</h1>
-      <p className="mb-4">
-        Welcome to the learning platform! Here you can explore various algorithms and data structures.
-      </p>
-      <h2 className="text-2xl font-semibold mt-6">Algorithms</h2>
-      <Algorithm />
-      <h2 className="text-2xl font-semibold mt-6">Data Structures</h2>
-      <DataStructure />
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">
+          Learn Data Structures and Algorithms
+        </h1>
+        <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12">
+          Master the fundamentals of computer science through interactive lessons
+          and visualizations.
+        </p>
+        <div className="grid md:grid-cols-2 gap-8">
+          <Algorithm />
+          <DataStructure />
+        </div>
+      </div>
     </div>
   );
 };
