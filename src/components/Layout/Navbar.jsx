@@ -9,25 +9,28 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 ${
       isHomePage ? 'bg-transparent' : 'bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900'
     }`}>
-      {/* Logo and Navigation Container */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo Section */}
+          {/* Enhanced Logo Section */}
           <Link to="/" className="flex items-center">
             <div className="relative group">
-              <div className="flex items-center space-x-1">
-                <span className="font-mono text-3xl font-black">
-                  <span className="text-white">{`<`}</span>
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">Bit</span>
-                  <span className="text-white">{`>`}</span>
+              <div className="flex items-center space-x-2">
+                <span className="font-mono text-3xl font-black transform transition-transform group-hover:scale-105 duration-300">
+                  <span className="text-white animate-pulse">{`<`}</span>
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-white to-blue-200 animate-gradient">Bit</span>
+                  <span className="text-white animate-pulse">{`>`}</span>
                 </span>
-                <span className="text-2xl font-code text-white/90 font-bold">By</span>
-                <span className="font-mono text-3xl font-black">
-                  <span className="text-white">{`<`}</span>
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">Bit</span>
-                  <span className="text-white">{`/>`}</span>
+                <span className="text-2xl font-code text-blue-300 font-bold transform transition-all group-hover:scale-110 duration-300 group-hover:text-blue-200">
+                  By
+                </span>
+                <span className="font-mono text-3xl font-black transform transition-transform group-hover:scale-105 duration-300">
+                  <span className="text-white animate-pulse">{`<`}</span>
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-white to-blue-200 animate-gradient">Bit</span>
+                  <span className="text-white animate-pulse">{`/>`}</span>
                 </span>
               </div>
+              {/* Add subtle glow effect on hover */}
+              <div className="absolute -inset-2 bg-blue-500/20 rounded-lg blur-xl transition-opacity opacity-0 group-hover:opacity-100 duration-300"></div>
             </div>
           </Link>
           
