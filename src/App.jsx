@@ -5,6 +5,9 @@ import Home from './pages/Home';
 import Learn from './pages/Learn';
 import Visualizer from './pages/Visualizer';
 import Challenges from './pages/Challenges';
+import Login from './pages/Login';
+
+
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
         <Route path="/learn" element={<Learn />} />
         <Route path="/visualizer" element={<Visualizer />} />
         <Route path="/challenges" element={<Challenges />} />
+        <Route path="/login" element={<Login />} />
+
       </Routes>
     </Router>
   );
