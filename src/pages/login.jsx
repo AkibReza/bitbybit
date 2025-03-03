@@ -4,16 +4,16 @@ const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-blue-700 font-roboto">
-      <div className="bg-white p-8 rounded-xl shadow-lg w-3/4 flex">
+    <div className="flex justify-center items-center h-screen bg-[#0F52BA] font-roboto">
+      <div className="p-8 rounded-xl shadow-lg w-3/4 flex">
         {/* Left Div with Welcome Message */}
-        <div className="w-1/2 p-8 flex flex-col justify-center items-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-l-xl bg-opacity-50">
+        <div className="w-1/2 p-8 flex flex-col justify-center items-center bg-transparent text-white rounded-l-xl">
           <h2 className="text-4xl font-bold mb-4">Welcome to bitbybit!🎉</h2>
-          <p className="text-lg mb-4">Explore, learn, and grow at your own pace. Let’s make learning fun and exciting together! 🚀📚</p>
+          <p className="text-lg mb-4">Explore, learn, and grow at your own pace. Let’s make learning fun and exciting together! 📚</p>
         </div>
 
         {/* Right Div with Login/Signup Form */}
-        <div className="w-1/2 p-4 rounded-r-xl bg-white bg-opacity-50">
+        <div className="w-1/2 p-4 rounded-r-xl bg-white bg-opacity-10 border border-white backdrop-blur-lg">
           {/* Tabs for Login & Signup */}
           <div className="flex justify-around mb-4">
             <button
@@ -31,22 +31,22 @@ const Login = () => {
           </div>
 
           {/* Form Section */}
-          <div className="bg-blue-100 p-4 rounded-lg bg-opacity-75">
+          <div className="p-4 rounded-lg">
             <form>
               <div className="mb-4">
-                <label className="block text-gray-700">Email Address</label>
+                <label className="block text-white">Email Address</label>
                 <input
                   type="email"
-                  className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-transparent text-white border-white"
                   required
                 />
               </div>
 
               <div className="mb-4">
-                <label className="block text-gray-700">Password</label>
+                <label className="block text-white">Password</label>
                 <input
                   type="password"
-                  className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-transparent text-white border-white"
                   required
                 />
               </div>
@@ -54,10 +54,10 @@ const Login = () => {
               {/* Extra field for Signup */}
               {!isLogin && (
                 <div className="mb-4">
-                  <label className="block text-gray-700">Confirm Password</label>
+                  <label className="block text-white">Confirm Password</label>
                   <input
                     type="password"
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-transparent text-white border-white"
                     required
                   />
                 </div>
@@ -65,7 +65,7 @@ const Login = () => {
 
               {/* Forgot Password Link */}
               {isLogin && (
-                <div className="text-right text-sm text-blue-500 hover:underline mb-4">
+                <div className="text-right text-sm text-blue-300 hover:underline mb-4">
                   Forgot password?
                 </div>
               )}
@@ -81,10 +81,10 @@ const Login = () => {
           </div>
 
           {/* Switch between Login & Signup */}
-          <p className="text-center text-sm mt-4">
-            {isLogin ? "Didn't you sign up?" : "Already have an account?"}{" "}
+          <p className="text-center text-sm mt-4 text-white">
+            {isLogin ? "Didn't you sign up?" : "Already have an account?"} {" "}
             <span
-              className="text-blue-500 cursor-pointer hover:underline"
+              className="text-blue-300 cursor-pointer hover:underline"
               onClick={() => setIsLogin(!isLogin)}
             >
               {isLogin ? "Signup now" : "Login"}
